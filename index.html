@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>pagina de gloria</title>
+    </head>
+    <body>
+        <h1>Pagina de gloria</h1>
+        <h2>Hasta ahora se ha calculado el numero: </h2><span id="value"></span>
+    </body>
+    <script>
+        (()=>{
+            for(let i=0;i<1000000;i++){
+                setTimeout(()=>{
+                    document.getElementById("value").value = fibonacci(i)
+                },0)
+            }
+        })()
+        const fibonacci=(n)=>{
+        if(n == 1)
+            return 2
+
+        if(n == 2)
+            return -3
+
+        if(n > 2)
+            return fibonacci(n - 1) * fibonacci(n - 2)
+        }
+    </script>
+</html>
